@@ -9,12 +9,6 @@ import { BasicForm } from './components/BasicForm';
 
 function App() {
 
-let data = {
-earningsMonthly: "3,00,000",
-earningsAnnually: "48,00,000",
-task:50,
-pendingRequests: 50
-}
 
 let [library, setLibrary] = useState([
   {
@@ -55,7 +49,7 @@ let [library, setLibrary] = useState([
         <Routes>
           <Route
             path="/"
-            element={<Dashboard data={{ data, library, setLibrary }} />}
+            element={<Dashboard data={{ library, setLibrary }} />}
           />
           <Route
             path="/add-books"
